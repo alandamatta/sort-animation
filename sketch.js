@@ -1,4 +1,5 @@
 let array =[];
+let array2 = [];
 
 function setup() {
 	let myCanvas = createCanvas(window.innerWidth, window.innerHeight - 200);
@@ -7,6 +8,7 @@ function setup() {
 	for (let i = 0; i < quantity || i < 6; i++) {
 		array.push(Math.round(random(innerHeight - 400)));
 	}
+	array2 = [...array];
 	noLoop();
 }
 

@@ -19,6 +19,7 @@
             <a class="waves-effect waves-light btn" onclick="bubbleSortEvent()">Bubble Sort</a>
             <a class="waves-effect waves-light btn" onclick="quickSortEvent()">Quick Sort</a>
             <a class="waves-effect waves-light btn" onclick="refresh()">Refresh</a>
+            <a class="waves-effect waves-light btn" onclick="undo()">Undo</a>
         </div>
         <div id="canvasDiv" class="card">
         </div>
@@ -43,9 +44,14 @@
 			array = [];
 			for (let i = 0; i < quantity || i < 6; i++) {
 				array.push(Math.round(random(innerHeight - 400)));
-
 			}
+			array2 = [...array];
 			update();
+        }
+
+        function undo() {
+            array = [...array2];
+            update();
         }
     </script>
 </body>
