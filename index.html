@@ -42,7 +42,7 @@
         function refresh() {
 			let quantity =( window.innerWidth / 55) - 13;
 			array = [];
-			for (let i = 0; i < quantity; i++) {
+			for (let i = 0; i < quantity || i < 6; i++) {
 				array.push(Math.round(random(innerHeight - 400)));
 
 			}
